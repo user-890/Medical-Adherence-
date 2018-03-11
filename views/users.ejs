@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<div class="container main">
+	<% user.forEach(function(user){ %>
+		<div class="user-box">
+			<img class="thumbnail" src="<%= user.image %>">
+			<h3 class="patient-name"><%= user.name %></h3>
+			<p><span><span class="user-since">User Since: </span><%= user.created.toDateString() %></span></p>
+			<!-- <a href="//<%= user._id %>">Read More</a> -->
+			<button type="button" class="btn btn-primary">Read More</button>
+		</div> 
+	<% }) %>
+</div>
+
+<% include partials/footer %>
