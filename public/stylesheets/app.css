@@ -1,0 +1,31 @@
+#boot-navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+}
+
+
+.login-background{
+	background: url("https://images.unsplash.com/photo-1452201200613-08b99de5b0b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=31e1c536846f204aa75087f852d561b2&auto=format&fit=crop&w=2552&q=80");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+#login-title {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+
+#login-container {
+	width: 40%; 
+	margin: 25px auto;
+	padding-top: 10%;
+}
+
+
