@@ -59,4 +59,17 @@
 	background-color: rgb(0, 102, 204);
 	display: inline-block;
 	border-radius: 20px;
+	vertical-align: top;
+}
+
+.square:hover {
+	background-color: rgb(0, 102, 204, 0.5);
+}
+
+
+.square-icon {
+	padding-top: 30%;
+	font-size: 8em;
+	margin: 0 120px;
+	color: white;
 }
