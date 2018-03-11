@@ -21,10 +21,10 @@ var patientSchema = new mongoose.Schema ({
 var Patient = mongoose.model("Patient", patientSchema);
 
 
-Patient.create({
-	name: "John Doe",
-	image: "https://images.unsplash.com/photo-1492899607222-5d9ac07b82f7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=21c014ba8260002710d0de53be3bc7ab&auto=format&fit=crop&w=800&q=60"
-});
+// Patient.create({
+// 	name: "John Doe",
+// 	image: "https://images.unsplash.com/photo-1492899607222-5d9ac07b82f7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=21c014ba8260002710d0de53be3bc7ab&auto=format&fit=crop&w=800&q=60"
+// });
 
 
 
