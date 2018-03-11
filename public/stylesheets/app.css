@@ -45,3 +45,18 @@
     left: 0;
     min-height: 400px;
 }
+
+
+#menu-boxes {
+	margin-top: 75px;
+	
+}
+
+.square {
+	width: 30%;
+	height: 300px;
+	margin: 1.36%;
+	background-color: rgb(0, 102, 204);
+	display: inline-block;
+	border-radius: 20px;
+}
