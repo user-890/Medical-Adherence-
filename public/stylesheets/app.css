@@ -73,3 +73,12 @@
 	margin: 0 120px;
 	color: white;
 }
+
+.foot {
+	margin-top: 100px;
+	height: 100px;
+	width: 100vw;
+	background-color: #eee;
+	text-align: center;
+	padding-top: 50px;
+}
