@@ -1,6 +1,6 @@
 # Medication Adherence Helper
 
-One Paragraph of project description goes here
+The purpose of the online patient medication adherence system is to notify and track medication adherence (when and how often patients take their medication as prescribed by a medical professional) of out-patients and to create a convenient and easy-to-use application for physicians, working with the patient; pharmacist distributing the medication, and patients who engage in polypharmacy. The system is based on a database that holds accurate and detailed . We will have a database server supporting hundreds of patients and will create a clear line of communication between physicians, pharmacists, and patients. Above all, the application endeavors to provide a comfortable user experience.
 
 ## Getting Started
 
