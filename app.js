@@ -21,9 +21,25 @@ var patientSchema = new mongoose.Schema ({
 var Patient = mongoose.model("Patient", patientSchema);
 
 
+var medicationSchema = new mongoose.Schema ({
+	medicationName: String,
+	date: Date,
+	desc: String
+});
+
+var Medication = mongoose.model("Medication", medicationSchema);
+
+
 // Patient.create({
 // 	name: "John Doe",
 // 	image: "https://images.unsplash.com/photo-1492899607222-5d9ac07b82f7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=21c014ba8260002710d0de53be3bc7ab&auto=format&fit=crop&w=800&q=60"
+// });
+
+
+// Medication.create({
+// 	medicationName: "Plavix",
+// 	Date: 03/11/2018,
+// 	desc: "Blood thinner."
 // });
 
 
@@ -54,14 +70,21 @@ app.get("/users", function(req, res){
 
 
 // NEW - show form to create new medication entry
-app.get("/calender/:id", function(req, res){
-	res.render("calender");
+app.get("/new", function(req, res){
+	res.render("new");
 });
 
 
 // SHOW 
 app.get("/medication-list/:id", function(req, res){
-	res.render("medication-list");
+	Medication.find({}, function(err, medication){
+		if(err){
+			console.log(err);
+		} else{
+			res.render("medication-list", {medication: medication});
+		}
+	});
+	
 });
 
 
