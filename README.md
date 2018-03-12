@@ -1,4 +1,4 @@
-# Project Title
+# Medication Adherence Helper
 
 One Paragraph of project description goes here
 
