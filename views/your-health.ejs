@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<div class="container">
+	<h1><%= currentUser.name %></h1>
+
+	<div class="col-md-3">
+		<div class="list-group">
+			<p class="lead">Doctors</p>
+			<li class="list-group-item active">Dr. Caramel</li>
+			<li class="list-group-item">Dr. Caramel</li>
+			<li class="list-group-item">Dr. Caramel</li>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<img class="thumbnail profile-image" src="<%= currentUser.image %>">
+		<div class="list-group">
+			<p class="lead">Information</p>
+			<li class="list-group-item">Name: <%= currentUser.name %></li>
+			<li class="list-group-item">Birthday: 07/29/1998</li>
+			<div class="list-group">
+				<% medication.forEach(function(medication){ %>
+		        <li class="list-group-item">
+		            <h5 class="mb-1"><%= medication.medicationName%></h5>
+		            <button class="pull-right btn btn-success info-button">Info</button>
+		            <small class="med-date"><%= medication.date.toString() %></small>
+		            <p><%= medication.desc %></p>
+		        </li>
+		        <% }) %>
+			</div>
+		</div>
+	</div>
+</div>
+<%include partials/footer %>

@@ -88,6 +88,17 @@ app.post("/medication-list", function(req, res){
 	});
 });
 
+
+app.get("/your-health", function(req, res){
+	Medication.find({}, function(err, medication){
+		if(err){
+			console.log(err);
+		} else{
+			res.render("your-health", {medication: medication});
+		}
+	});
+});
+
 // app.post("/medication-list", function(req, res){
 // 	// find campground with provided id
 // 	Medication.findById(req.params.id).populate("medicationName").exec(function(err, foundMedication){
