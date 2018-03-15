@@ -1,3 +1,5 @@
+
+
 #wrap {
    min-height:100%;
    position:relative;
@@ -5,7 +7,8 @@
 
 #boot-navbar {
     position: relative;
-    min-height: 50px;
+    min-height: 60px;
+    padding-top: 0.5%;
     margin-bottom: 0px;
 }
 
@@ -39,7 +42,7 @@
 }
 
 .carousel .item {
-  height: 400px;
+  height: 500px;
   
 }
 
@@ -74,21 +77,19 @@
 	margin-bottom: 35px;
 	font-size: 8em;
 	margin-left: 35%;
+	margin-right: 35%;
 	color: rgb(128,128,128);
 }
 
 
 
 .square-name {
-	/*text-align: center; 
-	font-size: 17px;*/
 	color: white;
-	margin-top: 25px;
-}
-
-
-.square-name {
-	color: white;
+	font-size: 20px;
+	/*padding-left: 35%;
+	padding-right: 35%;*/
+	padding-right: 90px;
+	font-weight: 500;
 }
 
 .square-name:hover {
@@ -96,8 +97,24 @@
 }
 
 
+.square-bottom {
+	background-color: rgb(70,130,180);
+	height: 34%;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	padding-left: 9px;
+	padding-top: 9px;
+}
 
-.main-btn {
+.square-desc {
+	color: rgb(223, 219, 218);
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: 500;
+}
+
+
+/*.main-btn {
 	margin-left: 25%;
 	width: 50%;
 	background-color: rgb(100,149,237);
@@ -108,7 +125,7 @@
 	background-color: rgb(100,149,237);
 	border-color: rgb(100,149,237);
 }
-
+*/
 
 .user-box {
 	width: 30%;
@@ -180,8 +197,16 @@ textarea {
 	color: rgb(176,176,176);
 }
 
+.info-button {
+	margin-left: 120px;
+	margin-right: 10px;
+}
 
-.foot {
+.footer-link{
+	color: rgb(100,149,237);
+}
+
+footer {
 	/*position: relative;
     left: 0;
     bottom: 0;
@@ -192,13 +217,14 @@ textarea {
 	text-align: center;
 	padding-top: 50px;*/
 
-	position:absolute;
     bottom:0;
+    margin-top: 55px;
     width:100%;
-    height:60px;   /* Height of the footer */
-    padding-top: 37px;
+    height:320px;   /* Height of the footer */
+    padding-top: 30px;
     background-color: #eee;
 	text-align: center;
+	border-top: 1px solid #ccc;
 
 }
 

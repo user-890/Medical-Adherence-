@@ -5,7 +5,7 @@
  <div class="jumbotron list-jumbotron">
     <h2>Medication Log</h2>
     <p>All your medications are listed below</p>
-    <button class="btn btn-primary"><a class="square-name" href="/new">Add Entry</a></button>
+    <button class="btn btn-primary"><a href="/new">Add Entry</a></button>
  </div>
 
 
@@ -15,6 +15,7 @@
         <% medication.forEach(function(medication){ %>
         <li class="list-group-item">
             <h5 class="mb-1"><%= medication.medicationName%></h5>
+            <button class="pull-right btn btn-success info-button">Info</button>
             <small class="med-date"><%= medication.date.toString() %></small>
             <p><%= medication.desc %></p>
         </li>

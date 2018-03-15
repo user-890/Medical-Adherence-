@@ -1,7 +1,24 @@
 		<!-- <div class="foot">
 			<p>Trademark 2017</p>
 		</div> -->
-		
+		<% if(!currentUser){ %>
+				
+		<% } else { %>
+		<footer>
+			<div class="container">
+				<div class="col-md-3">
+					<li class="footer-link">Your Health</li>
+					<li class="footer-link">Your Doctor</li>
+					<li class="footer-link">Medication History</li>
+					<li class="footer-link">Directory</li>
+					<li class="footer-link">Message</li>
+					<li class="footer-link">Statistics</li>
+				</div>
+			</div>
+		</footer>
+		<% } %>
+
+			
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
