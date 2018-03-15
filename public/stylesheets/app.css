@@ -176,6 +176,10 @@ textarea {
 	height: 250px;
 }
 
+.med-date {
+	color: rgb(176,176,176);
+}
+
 
 .foot {
 	/*position: relative;

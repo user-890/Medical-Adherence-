@@ -45,7 +45,7 @@ app.get("/", isLoggedIn, function(req, res){
 
 
 app.get("/users", function(req, res){
-	Patient.find({}, function(err, user){
+	User.find({}, function(err, user){
 		if(err){
 			console.log(err);
 		} else {
@@ -56,13 +56,13 @@ app.get("/users", function(req, res){
 
 
 // NEW - show form to create new medication entry
-app.get("/new", function(req, res){
+app.get("/new", isLoggedIn, function(req, res){
 	res.render("new");
 });
 
 
 // SHOW 
-app.get("/medication-list/:id", function(req, res){
+app.get("/medication-list", function(req, res){
 	Medication.find({}, function(err, medication){
 		if(err){
 			console.log(err);
@@ -70,8 +70,37 @@ app.get("/medication-list/:id", function(req, res){
 			res.render("medication-list", {medication: medication});
 		}
 	});
-	
 });
+
+
+app.post("/medication-list", function(req, res){
+	var medicationName = req.body.medicationName;
+	var date = req.body.date;
+	var desc = req.body.desc;
+	var newMed = {medicationName: medicationName, date: date, desc: desc};
+
+	Medication.create(newMed, function(err, newlyMed){
+		if(err){
+			console.log(err);
+		} else {
+			res.redirect("/medication-list");
+		}
+	});
+});
+
+// app.post("/medication-list", function(req, res){
+// 	// find campground with provided id
+// 	Medication.findById(req.params.id).populate("medicationName").exec(function(err, foundMedication){
+// 		if(err){
+// 			console.log(err);
+// 		} else {
+// 			// render show template
+// 			console.log(foundMedication);
+// 			res.render("/medication-list", {medication: foundMedication});
+// 		}	
+// 	});
+// });
+
 
 // Auth Routes
 app.get("/register", function(req, res){
@@ -80,7 +109,15 @@ app.get("/register", function(req, res){
 
 
 app.post("/register", function(req, res){
-	var newUser = new User({username: req.body.username});
+	var newUser = new User({
+		name: req.body.name,
+		username: req.body.username,
+		image: req.body.image,
+		email: req.body.email,
+		password: req.body.password,
+    	passwordConf: req.body.passwordConf
+	});
+
 	User.register(newUser, req.body.password, function(err, user){
 		if(err) {
 			console.log(err);
