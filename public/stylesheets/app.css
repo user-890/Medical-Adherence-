@@ -98,12 +98,15 @@
 
 
 .square-bottom {
+	position: relative;
 	background-color: rgb(70,130,180);
 	height: 34%;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
 	padding-left: 9px;
 	padding-top: 9px;
+	bottom: 0;
+	left: 0;
 }
 
 .square-desc {
@@ -203,7 +206,16 @@ textarea {
 }
 
 .footer-link{
-	color: rgb(100,149,237);
+	color: gray;
+	text-decoration: none;
+	list-style: none;
+	margin: 10px;
+}
+
+.footer-links {
+	padding-top: 40px;
+	padding-right: 40px;
+	border-right: 1px solid #ccc;
 }
 
 footer {
