@@ -6,7 +6,13 @@ var UserSchema = new mongoose.Schema ({
 	password: String,
 	name: String,
 	image: String,
-	created: {type: Date, default: Date.now}
+	created: {type: Date, default: Date.now},
+	medications: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "Medication"
+		}
+	]
 });
 
 UserSchema.plugin(passportLocalMongoose);
