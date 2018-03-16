@@ -131,6 +131,10 @@
 }
 */
 
+.btn-text-white {
+	color: white;
+}
+
 .user-box {
 	width: 30%;
 	height: 320px;
