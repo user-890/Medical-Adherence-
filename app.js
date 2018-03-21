@@ -62,28 +62,40 @@ app.get("/new", isLoggedIn, function(req, res){
 
 
 // SHOW 
-app.get("/medication-list", function(req, res){
-	Medication.find({}, function(err, medication){
+app.get("/medication-list/:id", function(req, res){
+	User.findById(req.params.id).populate("medications").exec(function(err, foundMedication){
 		if(err){
 			console.log(err);
 		} else{
-			res.render("medication-list", {medication: medication});
+			console.log(foundMedication);
+			res.render("medication-list", {user: foundMedication});
 		}
 	});
 });
 
 
-app.post("/medication-list", function(req, res){
+app.post("/medication-list/:id", function(req, res){
 	var medicationName = req.body.medicationName;
 	var date = req.body.date;
 	var desc = req.body.desc;
 	var newMed = {medicationName: medicationName, date: date, desc: desc};
 
-	Medication.create(newMed, function(err, newlyMed){
-		if(err){
+
+	User.findById(req.params.id, function(err, user){
+		if(err) {
 			console.log(err);
+			res.redirect("/");
 		} else {
-			res.redirect("/medication-list");
+			console.log(newMed);
+			Medication.create(newMed, function(err, medication){
+				if(err) {
+					console.log(err);
+				} else {
+					user.medications.push(medication);
+					user.save();
+					res.redirect("/medication-list/" + user._id);
+				}
+			});
 		}
 	});
 });

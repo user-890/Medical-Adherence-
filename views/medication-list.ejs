@@ -8,21 +8,19 @@
     <button class="btn btn-primary"><a class="btn-text-white" href="/new">Add Entry</a></button>
  </div>
 
-
   <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
-        <% medication.forEach(function(medication){ %>
+        <% user.medications.forEach(function(medication){ %>
         <li class="list-group-item">
             <h5 class="mb-1"><%= medication.medicationName%></h5>
             <button class="pull-right btn btn-success info-button">Info</button>
-            <small class="med-date"><%= medication.date.toString() %></small>
+            <small class="med-date"><%= medication.date %></small>
             <p><%= medication.desc %></p>
         </li>
         <% }) %>
       </div>
     </a>
-  </div>
 </div>
 
 <% include partials/footer %>
