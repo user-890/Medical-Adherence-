@@ -173,6 +173,17 @@ app.get("/logout", function(req, res){
 });
 
 
+app.get("/doctor", function(req, res){
+	console.log("This worked!");
+	res.render("doctor");
+});
+
+
+// Medication Stuff
+app.get("/show", function(req, res){
+	res.render("show");
+});
+
 function isLoggedIn(req, res, next){
 	if(req.isAuthenticated()){
 		return next();

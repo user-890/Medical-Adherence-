@@ -14,7 +14,7 @@
         <% user.medications.forEach(function(medication){ %>
         <li class="list-group-item">
             <h5 class="mb-1"><%= medication.medicationName%></h5>
-            <button class="pull-right btn btn-success info-button">Info</button>
+            <!-- <a class="pull-right btn btn-success info-button" href="/show">Info</a> -->
             <small class="med-date"><%= medication.date %></small>
             <p><%= medication.desc %></p>
         </li>
