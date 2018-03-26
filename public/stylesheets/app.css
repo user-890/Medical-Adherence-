@@ -231,8 +231,9 @@ textarea {
 
 
 .profile-image {
-	height: 300px;
-	width: 300px;
+	margin-top: 20%;
+	height: 250px;
+	width: 250px;
 	object-fit: cover;
 }
 
