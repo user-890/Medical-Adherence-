@@ -8,7 +8,8 @@ var express           = require("express"),
     passport          = require("passport"),
     Medication        = require("./models/medication")
 
-mongoose.connect("mongodb://localhost/medication_adherence_app");
+// mongoose.connect("mongodb://localhost/medication_adherence_app");
+mongoose.connect("mongodb://tyler:holloway@ds041924.mlab.com:41924/medadherence");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
