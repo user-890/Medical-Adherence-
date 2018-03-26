@@ -237,6 +237,12 @@ textarea {
 	object-fit: cover;
 }
 
+.analytics img{
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+}
+
 /* BARCODE */ 
 #barcode {
 	height: 300px;
