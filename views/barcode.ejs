@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+    <script type="text/javascript">
+        function generateBarCode()
+        {
+            var nric = $('#text').val();
+            var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
+            $('#barcode').attr('src', url);
+        }
+    </script>
+
+
+
+
+      <img class="centered" id='barcode' 
+            src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" 
+            alt="" 
+            title="HELLO" 
+            width="50" 
+            height="50" />
+
+<% include partials/footer %>

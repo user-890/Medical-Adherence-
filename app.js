@@ -184,6 +184,12 @@ app.get("/show", function(req, res){
 	res.render("show");
 });
 
+
+// barcode
+app.get("/barcode", function(req, res){
+	res.render("barcode");
+});
+
 function isLoggedIn(req, res, next){
 	if(req.isAuthenticated()){
 		return next();

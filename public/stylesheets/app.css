@@ -236,6 +236,15 @@ textarea {
 	object-fit: cover;
 }
 
+/* BARCODE */ 
+#barcode {
+	height: 300px;
+	width: 300px;
+	margin-left: 38%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
 footer {
 	/*position: relative;
     left: 0;
